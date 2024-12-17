@@ -361,3 +361,10 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+#My gitignore
+NextGUI/App/example/
+NextGUI/App/icon.ico
+NextGUI/App/Resource.rc
+NextGUI/App/AS_DEBUG/
+*.exe

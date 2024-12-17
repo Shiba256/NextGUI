@@ -765,6 +765,9 @@
     <None Include="App\engine\shader\glsl\quad_warp.frag">
       <Filter>Resource Files\engine\shader\glsl</Filter>
     </None>
+    <None Include="..\.gitignore">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Media Include="App\example\test.mp3">
