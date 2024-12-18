@@ -136,12 +136,33 @@
     <Filter Include="Resource Files\engine\font\min">
       <UniqueIdentifier>{1b103960-f11a-4515-b4f1-f59333ce00d9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\GradationRoundRect">
+      <UniqueIdentifier>{6460583d-3ae9-4299-b192-6c9320f5047c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DrawText">
+      <UniqueIdentifier>{8edb33f7-17cb-43bc-a2ce-2100fcaf89aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\src\GradationRoundRect\GradationRoundRect.cpp">
+      <Filter>Source Files\GradationRoundRect</Filter>
+    </ClCompile>
+    <ClCompile Include="src\src\DrawText\DrawText.cpp">
+      <Filter>Source Files\DrawText</Filter>
+    </ClCompile>
+    <ClCompile Include="src\src\DrawText\DrawIconText.cpp">
+      <Filter>Source Files\DrawText</Filter>
+    </ClCompile>
+    <ClCompile Include="src\src\DrawText\DrawIconText_impl.cpp">
+      <Filter>Source Files\DrawText</Filter>
+    </ClCompile>
+    <ClCompile Include="src\src\Button.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -768,6 +789,9 @@
     <None Include="..\.gitignore">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="..\README.md">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Media Include="App\example\test.mp3">
@@ -810,6 +834,66 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\PositionType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\GradationType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\nPalette.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\nConcept.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\GradationRoundRect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\src\GradationRoundRect\MakeGradation.h">
+      <Filter>Source Files\GradationRoundRect</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\ipp\GradationColor.ipp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\Outline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\StyleBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\AbstractComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\Box.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\GradationColor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\Shadow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\RoundRectStyle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\Text.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\DrawText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\src\DrawText\DrawIconText.h">
+      <Filter>Source Files\DrawText</Filter>
+    </ClInclude>
+    <ClInclude Include="src\src\DrawText\DrawIconText_impl.h">
+      <Filter>Source Files\DrawText</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\Font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\Button.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
