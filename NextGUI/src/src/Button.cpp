@@ -1,7 +1,7 @@
 ﻿#include"Button.h"
 
 #include"DrawText.h"
-#include"Font.h"
+#include"nFont.h"
 
 namespace nGUI {
 	void Button::update()  {
@@ -14,6 +14,7 @@ namespace nGUI {
 		}
 		else if (is_pressed) {
 			this->updateBox(style.rrs_pressed);
+			Mouse::ClearLRInput();
 		}
 		else {
 			this->updateBox(style.rrs);
@@ -35,6 +36,6 @@ namespace nGUI {
 		else {
 			this->drawBox(style.rrs);
 		}
-		drawText(box.round_rect, style.text.text, nFont::instance().getRegular(), nFont::instance().getIcon(), style.text.color, style.position_type, true);
+		drawText(style.text.font_size, box.round_rect, style.text.text, nFont::instance().get(), style.text.color, style.text.position);
 	}
 }
