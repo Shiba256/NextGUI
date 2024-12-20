@@ -45,24 +45,35 @@ namespace nGUI {
 			return box.round_rect;
 		}
 
-		constexpr const Vec2& getPos() const override {
+		void setStyle(const BoxStyle& _style) {
+			this->style = _style;
+		}
+
+		BoxStyle& changeStyle() {
+			return this->style;
+		}
+
+		constexpr Vec2 getPos() const override {
 			return style.pos;
 		}
-		constexpr const SizeF& getSize() const override {
+		constexpr Vec2 getLT() const override {
+			return style.getCalculatedPosition();
+		}
+		constexpr SizeF getSize() const override {
 			return style.size;
 		}
 		constexpr int32 getZIndex() const override {
 			return style.z_index;
 		}
-		constexpr void setPos(const Vec2& pos, PositionType position_type = PositionType::topLeft) override {
+		void setPos(const Vec2& pos, PositionType position_type = PositionType::topLeft) override {
 			style.pos = pos;
 			style.position_type = position_type;
 		}
+		void setSize(const SizeF& _size) override {
+			style.size = _size;
+		}
 		void ReConstruct() override {
 			box = GradationRoundRect{ RoundRect{style.getCalculatedPosition(),style.size,style.r} };
-		}
-		void setStyle(const BoxStyle& _style) {
-			this->style = _style;
 		}
 	private:
 		BoxStyle style;
