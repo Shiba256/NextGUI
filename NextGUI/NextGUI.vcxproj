@@ -118,11 +118,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="src\src\Autolayout.cpp" />
     <ClCompile Include="src\src\Button.cpp" />
-    <ClCompile Include="src\src\DrawText\DrawIconText.cpp" />
     <ClCompile Include="src\src\DrawText\DrawIconText_impl.cpp" />
     <ClCompile Include="src\src\DrawText\DrawText.cpp" />
     <ClCompile Include="src\src\GradationRoundRect\GradationRoundRect.cpp" />
+    <ClCompile Include="src\src\Panel.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
@@ -335,10 +336,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\include\AbstractComponent.h" />
+    <ClInclude Include="src\include\Autolayout.h" />
     <ClInclude Include="src\include\Box.h" />
     <ClInclude Include="src\include\Button.h" />
+    <ClInclude Include="src\include\ButtonPreset.h" />
     <ClInclude Include="src\include\DrawText.h" />
-    <ClInclude Include="src\include\Font.h" />
+    <ClInclude Include="src\include\Panel.h" />
+    <ClInclude Include="src\include\nFont.h" />
     <ClInclude Include="src\include\GradationColor.h" />
     <ClInclude Include="src\include\GradationRoundRect.h" />
     <ClInclude Include="src\include\GradationType.h" />
@@ -351,7 +355,6 @@
     <ClInclude Include="src\include\Shadow.h" />
     <ClInclude Include="src\include\StyleBase.h" />
     <ClInclude Include="src\include\Text.h" />
-    <ClInclude Include="src\src\DrawText\DrawIconText.h" />
     <ClInclude Include="src\src\DrawText\DrawIconText_impl.h" />
     <ClInclude Include="src\src\GradationRoundRect\MakeGradation.h" />
     <ClInclude Include="stdafx.h" />
