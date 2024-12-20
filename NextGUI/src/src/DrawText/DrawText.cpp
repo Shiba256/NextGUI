@@ -1,72 +1,72 @@
 ﻿#include"DrawText.h"
-#include"DrawIconText.h"
+#include"DrawIconText_impl.h"
 
 namespace nGUI {
-	void drawText(const RoundRect& rect, const String& label, const Font& font, const Font& iconFont, Color color, const PositionType& position, bool is_replace) {
+	void drawText(double size,const RoundRect& rect, const String& label, const Font& font,  Color color, const PositionType& position, bool is_replace) {
 		switch (position) {
 		case PositionType::center:
-			drawIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::center(rect.center()), font, iconFont, color);
+			font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).draw(size, Arg::center(rect.center()), color);
 			break;
 		case PositionType::bottomRight:
-			drawIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::bottomRight(rect.x + rect.w, rect.y + rect.h), font, iconFont, color);
+			font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).draw(size, Arg::bottomRight(rect.x + rect.w, rect.y + rect.h), color);
 			break;
 		case PositionType::bottomLeft:
-			drawIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::bottomLeft(rect.x, rect.y + rect.h), font, iconFont, color);
+			font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).draw(size, Arg::bottomLeft(rect.x, rect.y + rect.h), color);
 			break;
 		case PositionType::topRight:
-			drawIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::topRight(rect.x + rect.w, rect.y), font, iconFont, color);
+			font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).draw(size, Arg::topRight(rect.x + rect.w, rect.y), color);
 			break;
 		case PositionType::topLeft:
-			drawIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::topLeft(rect.x, rect.y), font, iconFont, color);
+			font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).draw(size, Arg::topLeft(rect.x, rect.y), color);
 			break;
 		case PositionType::rightCenter:
-			drawIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::rightCenter(rect.rightCenter()), font, iconFont, color);
+			font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).draw(size, Arg::rightCenter(rect.rightCenter()), color);
 			break;
 		case PositionType::leftCenter:
-			drawIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::leftCenter(rect.leftCenter()), font, iconFont, color);
+			font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).draw(size, Arg::leftCenter(rect.leftCenter()), color);
 			break;
 		case PositionType::topCenter:
-			drawIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::topCenter(rect.topCenter()), font, iconFont, color);
+			font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).draw(size, Arg::topCenter(rect.topCenter()), color);
 			break;
 		case PositionType::bottomCenter:
-			drawIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::bottomCenter(rect.bottomCenter()), font, iconFont, color);
+			font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).draw(size, Arg::bottomCenter(rect.bottomCenter()), color);
 			break;
 		default:
-			drawIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::topLeft(rect.x, rect.y), font, iconFont, color);
+			font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).draw(size, Arg::topLeft(rect.x, rect.y), color);
 			break;
 		}
 	}
-	RectF drawTextRegion(const RoundRect& rect, const String& label, const Font& font, const Font& iconFont, const PositionType& position, bool is_replace) {
+	RectF drawTextRegion(double size, const RoundRect& rect, const String& label, const Font& font, const PositionType& position, bool is_replace) {
 		switch (position) {
 		case PositionType::center:
-			return regionIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::center(rect.center()), font, iconFont);
+			return font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).region(size, Arg::center(rect.center()));
 			break;
 		case PositionType::bottomRight:
-			return regionIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::bottomRight(rect.x + rect.w, rect.y + rect.h), font, iconFont);
+			return font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).region(size, Arg::bottomRight(rect.x + rect.w, rect.y + rect.h));
 			break;
 		case PositionType::bottomLeft:
-			return regionIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::bottomLeft(rect.x, rect.y + rect.h), font, iconFont);
+			return font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).region(size, Arg::bottomLeft(rect.x, rect.y + rect.h));
 			break;
 		case PositionType::topRight:
-			return regionIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::topRight(rect.x + rect.w, rect.y), font, iconFont);
+			return font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).region(size, Arg::topRight(rect.x + rect.w, rect.y));
 			break;
 		case PositionType::topLeft:
-			return regionIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::topLeft(rect.x, rect.y), font, iconFont);
+			return font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).region(size, Arg::topLeft(rect.x, rect.y));
 			break;
 		case PositionType::rightCenter:
-			return regionIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::rightCenter(rect.rightCenter()), font, iconFont);
+			return font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).region(size, Arg::rightCenter(rect.rightCenter()));
 			break;
 		case PositionType::leftCenter:
-			return regionIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::leftCenter(rect.leftCenter()), font, iconFont);
+			return font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).region(size, Arg::leftCenter(rect.leftCenter()));
 			break;
 		case PositionType::topCenter:
-			return regionIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::topCenter(rect.topCenter()), font, iconFont);
+			return font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).region(size, Arg::topCenter(rect.topCenter()));
 			break;
 		case PositionType::bottomCenter:
-			return regionIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::bottomCenter(rect.bottomCenter()), font, iconFont);
+			return font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).region(size, Arg::bottomCenter(rect.bottomCenter()));
 			break;
 		default:
-			return regionIconText(is_replace ? label.replaced(U'\\', U'\n') : label, Arg::topLeft(rect.x, rect.y), font, iconFont);
+			return font(DrawIconText_impl::replaceUnicode(is_replace ? label.replaced(U'\\', U'\n') : label)).region(size, Arg::topLeft(rect.x, rect.y));
 			break;
 		}
 	}
