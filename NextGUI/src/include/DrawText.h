@@ -5,8 +5,8 @@
 #include"PositionType.h"
 
 namespace nGUI {
-	void drawText(const RoundRect& rect, const String& label, const Font& font, const Font& iconFont, Color color, const PositionType& position, bool is_replace);
-	RectF drawTextRegion(const RoundRect& rect, const String& label, const Font& font, const Font& iconFont, const PositionType& position, bool is_replace);
+	void drawText(double size, const RoundRect& rect, const String& label, const Font& font, Color color, const PositionType& position, bool is_replace = true);
+	RectF drawTextRegion(double size, const RoundRect& rect, const String& label, const Font& font, const PositionType& position, bool is_replace = true);
 }
 
 #endif
