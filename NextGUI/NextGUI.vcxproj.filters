@@ -148,6 +148,9 @@
     <Filter Include="Resource Files\example\xml">
       <UniqueIdentifier>{adda71c0-38fa-4ca2-91b9-e1e4039183dc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Impl Files">
+      <UniqueIdentifier>{66d31924-a20c-477a-aa8d-59981e1a607a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -866,9 +869,6 @@
     <ClInclude Include="src\include\GradationColor.h">
       <Filter>Header Files\Styles</Filter>
     </ClInclude>
-    <ClInclude Include="src\include\ipp\GradationColor.ipp">
-      <Filter>Header Files\Styles</Filter>
-    </ClInclude>
     <ClInclude Include="src\include\GradationRoundRect.h">
       <Filter>Header Files\Styles</Filter>
     </ClInclude>
@@ -909,6 +909,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\include\Autolayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\ipp\Panel.ipp">
+      <Filter>Impl Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\ipp\GradationColor.ipp">
+      <Filter>Impl Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\nGUI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

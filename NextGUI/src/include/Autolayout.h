@@ -15,7 +15,7 @@ namespace nGUI {
 	};
 
 	struct AutolayoutOptions {
-		LayoutType type = LayoutType::Flex;
+		LayoutType type = LayoutType::Flow;
 		Vec2 spacing = { 10.0, 10.0 }; // Spacing between components
 		Optional<SizeF> fixedSize = none; // Optional fixed size for components
 		size_t columns = 1; // Only relevant for grid layout

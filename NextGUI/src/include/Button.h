@@ -12,7 +12,8 @@
 
 
 namespace nGUI {
-	struct ButtonStyle : public StyleBase {
+	struct ButtonStyle {
+		COMMON_STYLE;
 
 		SIV3D_DISABLE_MSVC_WARNINGS_PUSH(4201)
 		union {

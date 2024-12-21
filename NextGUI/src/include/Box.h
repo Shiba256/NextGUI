@@ -11,9 +11,10 @@
 #include"stdafx.h"
 
 namespace nGUI {
-	struct BoxStyle : public StyleBase {
+	struct BoxStyle {
+		COMMON_STYLE;
 		SIV3D_DISABLE_MSVC_WARNINGS_PUSH(4201)
-		union {
+			union {
 			RoundRectStyle rrs;
 			struct {
 				GradationColor<ColorF> background_color;

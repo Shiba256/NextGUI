@@ -16,7 +16,7 @@ namespace nGUI {
 		alignComponents(components, containerPos, containerSize);
 	}
 
-	void Autolayout::applyFlexLayout(Array<Panel::Record>& components, const Vec2& containerPos, const SizeF& containerSize) const {
+	void Autolayout::applyFlexLayout(Array<Panel::Record>& components, const Vec2& containerPos, [[maybe_unused]]const SizeF& containerSize) const {
 		Vec2 currentPos = containerPos;
 		for (auto& record : components) {
 			const auto& componentSize = options.fixedSize.value_or(record.value->getSize());
@@ -79,7 +79,6 @@ namespace nGUI {
 			for (auto* record : row) {
 				const auto& componentSize = options.fixedSize.value_or(record->value->getSize());
 				record->value->setPos(rowStart);
-				const auto&& pos = record->value->getLT();
 				const auto&& size = record->value->getSize();
 				switch (options.alignment) {
 				case PositionType::center:
