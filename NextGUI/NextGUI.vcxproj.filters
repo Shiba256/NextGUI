@@ -151,6 +151,9 @@
     <Filter Include="Impl Files">
       <UniqueIdentifier>{66d31924-a20c-477a-aa8d-59981e1a607a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\LayoutManager">
+      <UniqueIdentifier>{2483ccfb-80a3-48b0-9207-799151472e8c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -174,8 +177,8 @@
     <ClCompile Include="src\src\Panel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\src\Autolayout.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\src\LauoutManager\LayoutManager.cpp">
+      <Filter>Source Files\LayoutManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -560,7 +563,6 @@
     <None Include="App\example\zip\zip_test.zip">
       <Filter>Resource Files\example\zip</Filter>
     </None>
-    <None Include=".editorconfig" />
     <None Include="App\example\obj\blacksmith.mtl">
       <Filter>Resource Files\example\obj</Filter>
     </None>
@@ -804,6 +806,7 @@
     <None Include="..\README.md">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include=".editorconfig" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="App\example\test.mp3">
@@ -908,7 +911,7 @@
     <ClInclude Include="src\include\Panel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\include\Autolayout.h">
+    <ClInclude Include="src\include\LayoutManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\include\ipp\Panel.ipp">
@@ -919,6 +922,21 @@
     </ClInclude>
     <ClInclude Include="src\include\nGUI.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\src\LauoutManager\FlewLayout.h">
+      <Filter>Source Files\LayoutManager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\src\LauoutManager\LayoutUtil.h">
+      <Filter>Source Files\LayoutManager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\src\LauoutManager\FlowLayout.h">
+      <Filter>Source Files\LayoutManager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\src\LauoutManager\GridLayout.h">
+      <Filter>Source Files\LayoutManager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\LayoutType.h">
+      <Filter>Header Files\Styles</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

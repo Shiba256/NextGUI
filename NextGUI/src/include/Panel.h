@@ -15,7 +15,7 @@ namespace nGUI {
 		Rect margin = { 0,0,0,0 };
 	};
 
-	class Autolayout;
+	class LayoutManager;
 
 	class Panel : public AbstractComponent {
 	public:
@@ -42,7 +42,12 @@ namespace nGUI {
 
 		void draw()const override;
 
-		void drawDebug(const Outline& outline = { .thickness = 1.0 ,.color = Palette::Red });
+		void drawDebug(const Outline& outline = { .thickness = 1.0 ,.color = Palette::Red }, bool debug_all = true);
+
+		template<nConcept::Component Type>
+		void add(StringView name, Type component) {
+			this->add(name, std::make_shared<Type>(component));
+		}
 
 		void add(StringView name, const std::shared_ptr<AbstractComponent>& component);
 
@@ -50,7 +55,7 @@ namespace nGUI {
 
 		void erase(size_t id);
 
-		void addLayoutManager(Autolayout&& manager);
+		void addLayoutManager(LayoutManager&& manager);
 
 		void callLayoutManager();
 
@@ -76,11 +81,12 @@ namespace nGUI {
 		void ReConstruct() override;
 
 	private:
+
 		PanelStyle style;
 		size_t id_count = 0ull;
 		Array<Record> components;
 		mutable std::unordered_map<StringView, void*> cache;
-		std::shared_ptr<Autolayout> layout_manager;
+		std::shared_ptr<LayoutManager> layout_manager;
 	};
 }
 

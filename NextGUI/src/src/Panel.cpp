@@ -1,5 +1,5 @@
 ﻿#include"Panel.h"
-#include"Autolayout.h"
+#include"LayoutManager.h"
 
 namespace nGUI {
 	void  Panel::update() {
@@ -18,13 +18,17 @@ namespace nGUI {
 		}
 	}
 
-	void Panel::drawDebug(const Outline& outline ) {
+	void Panel::drawDebug(const Outline& outline,bool debug_all) {
 		RectF{ style.getCalculatedPosition(),style.size }.drawFrame(outline.thickness, outline.color);
+		for (const auto& component : components) {
+			if (const auto ptr = std::dynamic_pointer_cast<Panel>(component.value)) {
+				ptr->drawDebug(outline, debug_all);
+			}
+		}
 	}
 
 	void Panel::add(StringView name, const std::shared_ptr<AbstractComponent>& component) {
 		component->setPos(component->getLT() + this->getLT());
-		component->ReConstruct();
 		components.emplace_back(id_count++, name, component);
 		this->callLayoutManager();
 	}
@@ -39,8 +43,8 @@ namespace nGUI {
 		this->callLayoutManager();
 	}
 
-	void Panel::addLayoutManager(Autolayout&& manager) {
-		this->layout_manager = std::make_shared<Autolayout>(manager);
+	void Panel::addLayoutManager(LayoutManager&& manager) {
+		this->layout_manager = std::make_shared<LayoutManager>(manager);
 		this->callLayoutManager();
 	}
 

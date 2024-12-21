@@ -11,7 +11,7 @@
 
 #include"Panel.h"
 
-#include"Autolayout.h"
+#include"LayoutManager.h"
 
 
 #endif

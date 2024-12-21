@@ -337,11 +337,11 @@ namespace nGUI {
 				ButtonStyle style;
 				style.rrs = {
 					.background_color = Scene::GetBackground(),
-					.shadow = {.offset = {5,5},.blur = 5.0}
+					.shadow = {.offset = {-1,-1},.blur = 5.0}
 				};
 				style.rrs_pressed = {
 					.background_color = Scene::GetBackground(),
-					.shadow = {.offset = {1,1},.blur = 1.0}
+					.shadow = {.offset = {-5,-5},.blur = 5.0}
 				};
 				style.rrs_unable = {
 					.background_color = Scene::GetBackground(),
