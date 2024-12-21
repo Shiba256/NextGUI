@@ -8,7 +8,8 @@
 #include"stdafx.h"
 
 namespace nGUI {
-	struct PanelStyle : public StyleBase {
+	struct PanelStyle {
+		COMMON_STYLE;
 		bool auto_size = false;
 		bool hide_overflow = false;
 		Rect margin = { 0,0,0,0 };
@@ -53,6 +54,9 @@ namespace nGUI {
 
 		void callLayoutManager();
 
+		template<class Type>
+		Type* get(StringView name) const;
+
 		constexpr Vec2 getPos() const override {
 			return style.pos;
 		}
@@ -75,8 +79,10 @@ namespace nGUI {
 		PanelStyle style;
 		size_t id_count = 0ull;
 		Array<Record> components;
+		mutable std::unordered_map<StringView, void*> cache;
 		std::shared_ptr<Autolayout> layout_manager;
 	};
 }
 
+#include"./ipp/Panel.ipp"
 #endif
