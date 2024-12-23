@@ -9,7 +9,7 @@
 
 namespace nGUI {
 	struct PanelStyle {
-		COMMON_STYLE;
+		COMMON_STYLE
 		bool auto_size = false;
 		bool hide_overflow = false;
 		Rect margin = { 0,0,0,0 };
@@ -42,7 +42,7 @@ namespace nGUI {
 
 		void draw()const override;
 
-		void drawDebug(const Outline& outline = { .thickness = 1.0 ,.color = Palette::Red }, bool debug_all = true);
+		void drawDebug(const Outline& outline = { .thickness = 1.0 ,.color = Palette::Red }, bool debug_all = true,size_t depth = 0ull);
 
 		template<nConcept::Component Type>
 		void add(StringView name, Type component) {

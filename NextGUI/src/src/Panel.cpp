@@ -18,11 +18,11 @@ namespace nGUI {
 		}
 	}
 
-	void Panel::drawDebug(const Outline& outline,bool debug_all) {
-		RectF{ style.getCalculatedPosition(),style.size }.drawFrame(outline.thickness, outline.color);
+	void Panel::drawDebug(const Outline& outline,bool debug_all, size_t depth) {
+		RectF{ style.getCalculatedPosition(),style.size }.drawFrame(outline.thickness, outline.color.lerp(Palette::Blue,depth/5.0));
 		for (const auto& component : components) {
 			if (const auto ptr = std::dynamic_pointer_cast<Panel>(component.value)) {
-				ptr->drawDebug(outline, debug_all);
+				ptr->drawDebug(outline, debug_all, depth + 1ull);
 			}
 		}
 	}
