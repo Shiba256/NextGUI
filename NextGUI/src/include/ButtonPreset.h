@@ -256,7 +256,7 @@ namespace nGUI {
 				return style;
 			}
 			static inline ButtonStyle BackgroundBlend(const Vec2& pos, PositionType position_type, const SizeF& size, const String& text) {
-				const auto bgColor = Scene::GetBackground();
+				const auto& bgColor = Scene::GetBackground();
 				ButtonStyle style;
 
 				style.rrs = {
@@ -282,7 +282,7 @@ namespace nGUI {
 			}
 
 			static inline ButtonStyle Minimalistic(const Vec2& pos, PositionType position_type, const SizeF& size, const String& text) {
-				const auto bgColor = Scene::GetBackground();
+				const auto& bgColor = Scene::GetBackground();
 				ButtonStyle style;
 
 				style.rrs = {
@@ -308,7 +308,7 @@ namespace nGUI {
 			}
 
 			static inline ButtonStyle FrostedGlass(const Vec2& pos, PositionType position_type, const SizeF& size, const String& text) {
-				const auto bgColor = Scene::GetBackground();
+				const auto& bgColor = Scene::GetBackground();
 				ButtonStyle style;
 
 				style.rrs = {
