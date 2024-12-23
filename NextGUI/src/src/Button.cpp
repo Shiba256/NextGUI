@@ -2,19 +2,24 @@
 
 #include"DrawText.h"
 #include"nFont.h"
+#include"MouseEventManager.h"
 
 namespace nGUI {
 	void Button::update()  {
-		is_pressed = box.round_rect.leftPressed();
-		is_release = box.round_rect.leftReleased();
-		is_over = box.round_rect.mouseOver();
+		is_pressed = MouseEventManager::leftPressed(box.round_rect);
+		is_release = MouseEventManager::leftReleased(box.round_rect);
+		is_over = MouseEventManager::mouseOver(box.round_rect);
 
 		if (not style.enable) {
 			this->updateBox(style.rrs_unable);
 		}
 		else if (is_pressed) {
 			this->updateBox(style.rrs_pressed);
-			Mouse::ClearLRInput();
+			MouseEventManager::clearAll();
+		}
+		else if (is_over) {
+			this->updateBox(style.rrs_mouseover);
+			MouseEventManager::clearAll();
 		}
 		else {
 			this->updateBox(style.rrs);
@@ -32,6 +37,9 @@ namespace nGUI {
 		}
 		else if (is_pressed) {
 			this->drawBox(style.rrs_pressed);
+		}
+		else if (is_over) {
+			this->drawBox(style.rrs_mouseover);
 		}
 		else {
 			this->drawBox(style.rrs);

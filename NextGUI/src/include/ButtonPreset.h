@@ -19,6 +19,11 @@ namespace nGUI {
 					.background_color = {.color_from = Palette::Gray},
 					.shadow = {.offset = {0, 0}, .blur = 0, .spread = 0, .color = ColorF(0.0, 0.0)}
 				};
+				style.rrs_mouseover = {
+					.background_color = {.color_from = Palette::White},
+					.outline = {.thickness = 0.5 , .color = Palette::Lightskyblue},
+					.shadow = {.offset = {0, 4}, .blur = 8, .spread = 0, .color = ColorF(0.0, 0.2)}
+				};
 				style.text = { .text = text, .color = Palette::Black };
 				style.pos = pos;
 				style.position_type = position_type;

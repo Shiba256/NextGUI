@@ -47,10 +47,24 @@ namespace nGUI {
 				double r_unable;
 			};
 		};
+
+		SIV3D_DISABLE_MSVC_WARNINGS_PUSH(4201)
+			union {
+			RoundRectStyle rrs_mouseover{ Palette::White };
+			struct {
+				GradationColor<ColorF> background_color_mouseover;
+				Outline outline_mouseover;
+				Shadow shadow_mouseover;
+				double r_mouseover;
+			};
+		};
+
+
 		void setR(double _r) {
 			this->r = _r;
 			this->r_pressed = _r;
 			this->r_unable = _r;
+			this->r_mouseover = _r;
 		}
 		Text text;
 		bool enable = true;

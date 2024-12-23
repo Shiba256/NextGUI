@@ -10,15 +10,45 @@ namespace nGUI {
 	public:
 		static bool leftClicked();
 
+		template<nConcept::PlanShape ShapeType>
+		static bool leftClicked(const ShapeType& shape) {
+			return shape.mouseOver() && leftClicked();
+		}
+
 		static bool rightClicked();
+
+		template<nConcept::PlanShape ShapeType>
+		static bool rightClicked(const ShapeType& shape) {
+			return shape.mouseOver() && rightClicked();
+		}
 
 		static bool leftPressed();
 
+		template<nConcept::PlanShape ShapeType>
+		static bool leftPressed(const ShapeType& shape) {
+			return shape.mouseOver() && leftPressed();
+		}
+
 		static bool rightPressed();
+
+		template<nConcept::PlanShape ShapeType>
+		static bool rightPressed(const ShapeType& shape) {
+			return shape.mouseOver() && rightPressed();
+		}
 
 		static bool leftReleased();
 
+		template<nConcept::PlanShape ShapeType>
+		static bool leftReleased(const ShapeType& shape) {
+			return shape.mouseOver() && leftReleased();
+		}
+
 		static bool rightReleased();
+
+		template<nConcept::PlanShape ShapeType>
+		static bool rightReleased(const ShapeType& shape) {
+			return shape.mouseOver() && rightReleased();
+		}
 
 		template<nConcept::PlanShape ShapeType>
 		static bool mouseOver(const ShapeType& shape) {
@@ -32,6 +62,13 @@ namespace nGUI {
 		static void clearUp();
 
 		static void clearMouseOver();
+
+		static void clearAll() {
+			clearUp();
+			clearPressed();
+			clearDown();
+			clearMouseOver();
+		}
 	private:
 		class MouseEventManagerImpl;
 		std::shared_ptr<MouseEventManagerImpl> p_impl;

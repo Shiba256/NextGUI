@@ -927,9 +927,6 @@
     <ClInclude Include="src\include\nFont.h">
       <Filter>Header Files\Styles</Filter>
     </ClInclude>
-    <ClInclude Include="src\include\nGUI.h">
-      <Filter>Header Files\Styles</Filter>
-    </ClInclude>
     <ClInclude Include="src\include\nPalette.h">
       <Filter>Header Files\Styles</Filter>
     </ClInclude>
@@ -965,6 +962,9 @@
     </ClInclude>
     <ClInclude Include="src\include\MouseEventManager.h">
       <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\nGUI.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
