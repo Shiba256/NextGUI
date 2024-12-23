@@ -14,7 +14,7 @@
 namespace nGUI {
 	struct ButtonStyle {
 		COMMON_STYLE;
-
+		
 		SIV3D_DISABLE_MSVC_WARNINGS_PUSH(4201)
 		union {
 			RoundRectStyle rrs{ Palette::White };

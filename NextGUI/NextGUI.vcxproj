@@ -122,7 +122,9 @@
     <ClCompile Include="src\src\DrawText\DrawIconText_impl.cpp" />
     <ClCompile Include="src\src\DrawText\DrawText.cpp" />
     <ClCompile Include="src\src\GradationRoundRect\GradationRoundRect.cpp" />
+    <ClCompile Include="src\src\Initializer.cpp" />
     <ClCompile Include="src\src\LauoutManager\LayoutManager.cpp" />
+    <ClCompile Include="src\src\MouseEventManager\MouseEventManager.cpp" />
     <ClCompile Include="src\src\Panel.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -316,6 +318,7 @@
     <None Include="App\example\toml\config.toml" />
     <None Include="App\example\toml\test.toml" />
     <None Include="App\example\zip\zip_test.zip" />
+    <None Include="cpp.hint" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="App\example\shot.mp3" />
@@ -336,6 +339,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\include\AbstractComponent.h" />
+    <ClInclude Include="src\include\CheckBox.h" />
+    <ClInclude Include="src\include\Constants.h" />
+    <ClInclude Include="src\include\Initializer.h" />
     <ClInclude Include="src\include\LayoutManager.h" />
     <ClInclude Include="src\include\Box.h" />
     <ClInclude Include="src\include\Button.h" />
@@ -343,6 +349,7 @@
     <ClInclude Include="src\include\DrawText.h" />
     <ClInclude Include="src\include\ipp\Panel.ipp" />
     <ClInclude Include="src\include\LayoutType.h" />
+    <ClInclude Include="src\include\MouseEventManager.h" />
     <ClInclude Include="src\include\nGUI.h" />
     <ClInclude Include="src\include\Panel.h" />
     <ClInclude Include="src\include\nFont.h" />
@@ -364,6 +371,7 @@
     <ClInclude Include="src\src\LauoutManager\FlowLayout.h" />
     <ClInclude Include="src\src\LauoutManager\GridLayout.h" />
     <ClInclude Include="src\src\LauoutManager\LayoutUtil.h" />
+    <ClInclude Include="src\src\MouseEventManager\MouseEventManagerImpl.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
