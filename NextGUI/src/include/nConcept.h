@@ -17,6 +17,11 @@ namespace nGUI {
 
 		template<class Type>
 		concept Component = std::is_base_of<AbstractComponent, Type>::value;
+		template<class Type>
+		concept PlanShape = requires(const Type & type) {
+			type.mouseOver();
+		};
+
 	}
 }
 #endif
