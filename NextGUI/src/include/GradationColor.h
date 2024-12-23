@@ -12,7 +12,7 @@
 namespace nGUI {
 	template<nConcept::Siv3DColorType color_type = ColorF>
 	struct GradationColor {
-		color_type color_from = nPalette::Clear;
+		color_type color_from = Palette::White;
 		color_type color_to = nPalette::Clear;
 		GradationType type = GradationType::none;
 		inline void draw(const RectF& rect) const;
