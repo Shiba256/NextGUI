@@ -119,6 +119,7 @@
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="src\src\Button.cpp" />
+    <ClCompile Include="src\src\CheckBox.cpp" />
     <ClCompile Include="src\src\DrawText\DrawIconText_impl.cpp" />
     <ClCompile Include="src\src\DrawText\DrawText.cpp" />
     <ClCompile Include="src\src\GradationRoundRect\GradationRoundRect.cpp" />
@@ -340,6 +341,7 @@
   <ItemGroup>
     <ClInclude Include="src\include\AbstractComponent.h" />
     <ClInclude Include="src\include\CheckBox.h" />
+    <ClInclude Include="src\include\CheckBoxPreset.h" />
     <ClInclude Include="src\include\Constants.h" />
     <ClInclude Include="src\include\Initializer.h" />
     <ClInclude Include="src\include\LayoutManager.h" />

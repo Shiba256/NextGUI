@@ -3,7 +3,7 @@
 #include"Constants.h"
 #include"MouseEventManager.h"
 
-#include"stdafx.h"
+#include"Siv3D/Addon.hpp"
 
 namespace nGUI {
 	void Initializer() {

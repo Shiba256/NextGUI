@@ -14,6 +14,12 @@
 #include"ButtonPreset.h"
 #endif // !_NO_USE_BUTTON_
 
+// CheckBox
+#ifndef _NO_USE_CHECKBOX_
+#include"CheckBox.h"
+#include"CheckBoxPreset.h"
+#endif // !_NO_USE_CHECKBOX_
+
 // Panel
 #ifndef _NO_USE_PANEL_
 #include"Panel.h"
